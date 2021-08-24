@@ -20,7 +20,7 @@ import type { Interactable } from './Interactable'
 import { PointerInfo } from './PointerInfo'
 import type { ActionName, Scope } from './scope'
 
-export interface ActionProps<T extends ActionName | null = never> {
+export interface ActionProps<T extends ActionName = never> {
   name: T
   axis?: 'x' | 'y' | 'xy' | null
   edges?: EdgeOptions | null
@@ -101,14 +101,14 @@ declare module '@interactjs/core/scope' {
   }
 }
 
-export type InteractionProxy<T extends ActionName | null = never> = Pick<
+export type InteractionProxy<T extends ActionName = never> = Pick<
 Interaction<T>,
 keyof typeof _ProxyValues | keyof typeof _ProxyMethods
 >
 
 let idCounter = 0
 
-export class Interaction<T extends ActionName | null = ActionName> {
+export class Interaction<T extends ActionName = ActionName> {
   // current interactable being interacted with
   interactable: Interactable = null
 

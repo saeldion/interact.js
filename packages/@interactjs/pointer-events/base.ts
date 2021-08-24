@@ -55,7 +55,7 @@ declare module '@interactjs/core/scope' {
   interface SignalArgs {
     'pointerEvents:new': { pointerEvent: PointerEvent<any> }
     'pointerEvents:fired': {
-      interaction: Interaction<null>
+      interaction: Interaction<'none'>
       pointer: PointerType | PointerEvent<any>
       event: PointerEventType | PointerEvent<any>
       eventTarget: Node

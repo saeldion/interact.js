@@ -2,7 +2,7 @@ import type { Interactable } from '@interactjs/core/Interactable'
 import type { Interaction, InteractionProxy } from '@interactjs/core/Interaction'
 import type { ActionName } from '@interactjs/core/scope'
 
-export class BaseEvent<T extends ActionName | null = never> {
+export class BaseEvent<T extends ActionName = never> {
   type: string
   target: EventTarget
   currentTarget: Node

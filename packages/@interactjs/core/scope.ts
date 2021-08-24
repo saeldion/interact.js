@@ -41,7 +41,9 @@ interface DocSignalArg {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface ActionMap {}
+export interface ActionMap {
+  none?: null
+}
 export type ActionName = keyof ActionMap
 
 export interface Actions {
